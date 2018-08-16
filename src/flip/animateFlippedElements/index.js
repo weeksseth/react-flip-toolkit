@@ -291,6 +291,7 @@ const animateFlippedElements = ({
       // when it is called, the animation has already been cancelled
       const onAnimationEnd = () => {
         delete inProgressAnimations[id];
+        console.log("done!");
         element.style.transform = "";
         isFunction(onComplete) && onComplete();
       };
